@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Gothic&family=Roboto:wght@400;700&display=swap');
+
+/*  font-family: 'Gowun Batang', serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif; */
+
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box-sinema{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1060px;
+    height: fit-content;
+    padding: 40px 28px 30px;
+    text-align: center;
+    background-color: $gray6;
+    box-sizing: border-box;
+}
+
+.box-title{
+    font-size: 24px;
+    font-weight: 700;
+    &::after{
+        content: " ";
+        display: block;
+        width: 650px;
+        margin: 37px auto 28px;
+        border-bottom: 2px solid $gray4;
+    }
+}
+
+.main-nav{
+    .nav-list{
+        display: inline-block;
+    }
+}
+
+.box-movielist{
+    .card-movielist{
+        .card-movie{
+            width: 220px;
+            padding: 19px 20px 0;
+            background-color: white;
+            box-sizing: border-box;
+            .img-movie{
+                width: 180px;
+            }
+        }
+    }
+}
