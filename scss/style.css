@@ -155,6 +155,7 @@ body {
   text-align: center;
   background-color: #F2F2F2;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .box-title {
@@ -173,12 +174,49 @@ body {
   display: inline-block;
 }
 
+.box-movielist {
+  text-align: left;
+  background-color: white;
+  border-radius: 15px;
+  width: 1003px;
+  padding: 25px 26px;
+  outline: 1px solid #BDBDBD;
+  box-sizing: border-box;
+}
 .box-movielist .card-movielist .card-movie {
   width: 220px;
   padding: 19px 20px 0;
   background-color: white;
   box-sizing: border-box;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
 }
 .box-movielist .card-movielist .card-movie .img-movie {
   width: 180px;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.box-movielist .card-movielist .card-movie .title-movie {
+  display: block;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  margin: 11px 0 12px;
+}
+.box-movielist .card-movielist .card-movie .content-moviedetails {
+  position: relative;
+}
+.box-movielist .card-movielist .card-movie .content-moviedetails div {
+  font-size: 13px;
+  margin: 5px auto;
+}
+.box-movielist .card-movielist .card-movie .content-moviedetails div [class^=title-] {
+  color: #828282;
+}
+.box-movielist .card-movielist .card-movie .content-moviedetails .container-moviestar {
+  position: absolute;
+  right: 0;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */
