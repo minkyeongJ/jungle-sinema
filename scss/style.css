@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -175,6 +176,9 @@ body {
   font-weight: 500;
   margin: 0 30px;
 }
+.main-nav .color-black {
+  color: black;
+}
 
 .box-movielist {
   text-align: left;
@@ -186,6 +190,11 @@ body {
   outline: 1px solid #BDBDBD;
   box-sizing: border-box;
 }
+.box-movielist .card-movielist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 25px;
+}
 .box-movielist .card-movielist .card-movie {
   width: 220px;
   padding: 19px 20px 0;
@@ -196,13 +205,15 @@ body {
   overflow: hidden;
 }
 .box-movielist .card-movielist .card-movie .img-movie {
-  width: 180px;
+  height: 250px;
   border: 1px solid #BDBDBD;
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .box-movielist .card-movielist .card-movie .title-movie {
+  overflow: hidden;
+  white-space: nowrap;
   display: block;
   font-weight: 900;
   text-overflow: ellipsis;
@@ -257,6 +268,18 @@ body {
   float: right;
   width: 113px;
 }
+.box-movielist .card-movielist .card-movie .btn-trailer::before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  background-image: url(../images/영화목록페이지/아이콘_재생.png);
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 1px;
+}
 
 .section-footer {
   padding: 53px 0 38px;
@@ -267,8 +290,32 @@ body {
   width: 1189px;
 }
 .section-footer section h2 {
+  display: inline-block;
   font-size: 22px;
   font-weight: 700;
+}
+.section-footer section ul {
+  float: right;
+}
+.section-footer section .twitter, .section-footer section .instagram, .section-footer section .facebook {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/SNS_아이콘/sns_icon.png);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  margin-left: 25px;
+  background-position-x: -10px;
+}
+.section-footer section .twitter {
+  background-position-y: -50px;
+}
+.section-footer section .instagram {
+  background-position-y: -10px;
+}
+.section-footer section .facebook {
+  background-position-x: -14px;
+  background-position-y: -90px;
 }
 .section-footer span {
   display: inline-block;
@@ -278,7 +325,25 @@ body {
   width: 1189px;
   border-top: 1px solid #C4C4C4;
 }
-
-.color-black {
-  color: black;
+.section-footer .details-footer {
+  margin: 0 auto;
+  width: 1189px;
+  color: #4F4F4F;
+  font-size: 14px;
+}
+.section-footer .details-footer .txt-companyname, .section-footer .details-footer [class^=title-] {
+  font-weight: 700;
+}
+.section-footer .details-footer .txt-companyname::after, .section-footer .details-footer .txt-ownername::after, .section-footer .details-footer .txt-businessnumber::after, .section-footer .details-footer .txt-industry::after {
+  display: inline-block;
+  position: relative;
+  content: "";
+  border-left: 1px solid #4F4F4F;
+  height: 16px;
+  top: 3px;
+  margin: 0 7px;
+}
+.section-footer .details-footer .txt-copyright {
+  float: right;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

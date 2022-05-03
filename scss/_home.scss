@@ -43,6 +43,9 @@ body{
         font-weight: 500;
         margin: 0 30px;
     }
+    .color-black{
+        color: black;
+    }
 }
 
 .box-movielist{
@@ -55,6 +58,9 @@ body{
     outline : 1px solid $gray4;
     box-sizing: border-box;
     .card-movielist{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 25px;
         .card-movie{
             width: 220px;
             padding: 19px 20px 0;
@@ -64,13 +70,15 @@ body{
             border-radius: 10px ;
             overflow: hidden;
             .img-movie{
-                width: 180px;
+                height: 250px;
                 border: 1px solid $gray4;
                 border-radius: 10px;
                 box-sizing: border-box;
                 box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
             }
             .title-movie{
+                overflow: hidden;
+                white-space: nowrap;
                 display: block;
                 font-weight: 900;
                 text-overflow: ellipsis;
@@ -127,6 +135,18 @@ body{
             .btn-trailer{
                 float: right;
                 width: 113px;
+                &::before{
+                    display: inline-block;
+                    position: relative;
+                    content : '';
+                    background-image: url(../images/영화목록페이지/아이콘_재생.png);
+                    width: 14px;
+                    height: 14px;
+                    margin-right: 3px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    top:1px;
+                }
             }
         }
     }
@@ -139,8 +159,32 @@ body{
         margin: 0 auto;
         width: 1189px;
         h2{
+            display: inline-block;
             font-size: 22px;
             font-weight: 700;
+        }
+        ul{
+            float: right;
+        }
+        .twitter, .instagram, .facebook{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-image: url(../images/SNS_아이콘/sns_icon.png);
+            background-repeat: no-repeat;
+            background-size: 200%;
+            margin-left: 25px;
+            background-position-x: -10px;
+        }
+        .twitter{
+            background-position-y: -50px;
+        }
+        .instagram{
+            background-position-y: -10px;
+        }
+        .facebook{
+            background-position-x: -14px;
+            background-position-y: -90px;
         }
     }
     span{
@@ -152,8 +196,29 @@ body{
         width: 1189px;
         border-top: 1px solid $input-box;
     }
+    .details-footer{
+        margin: 0 auto;
+        width: 1189px;
+        color: $gray2;
+        font-size: 14px; 
+        .txt-companyname, [class^="title-"]{
+            font-weight: 700;
+        }
+        .txt-companyname, .txt-ownername, .txt-businessnumber, .txt-industry{
+            &::after{
+                display: inline-block;
+                position: relative;
+                content:'';
+                border-left: 1px solid $gray2;
+                height: 16px;
+                top: 3px;
+                margin: 0 7px;
+            }
+        }
+        .txt-copyright{
+            float: right;
+            font-weight: 700 ;
+        }
+    }
 }
 
-.color-black{
-    color: black;
-}
