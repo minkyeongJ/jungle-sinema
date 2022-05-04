@@ -169,14 +169,21 @@ body {
   border-bottom: 2px solid #BDBDBD;
 }
 
-.main-nav .nav-list {
+.main-nav li {
   display: inline-block;
-  color: #828282;
+}
+.main-nav li .nav-list {
   font-size: 16px;
   font-weight: 500;
   margin: 0 30px;
+  text-decoration: none;
 }
-.main-nav .color-black {
+
+.color-gray {
+  color: #828282;
+}
+
+.color-black {
   color: black;
 }
 
@@ -214,9 +221,9 @@ body {
 .box-movielist .card-movielist .card-movie .title-movie {
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
   display: block;
   font-weight: 900;
-  text-overflow: ellipsis;
   font-size: 16px;
   margin: 11px 0 12px;
 }
@@ -297,6 +304,9 @@ body {
 .section-footer section ul {
   float: right;
 }
+.section-footer section li {
+  float: left;
+}
 .section-footer section .twitter, .section-footer section .instagram, .section-footer section .facebook {
   float: left;
   width: 20px;
@@ -308,10 +318,10 @@ body {
   background-position-x: -10px;
 }
 .section-footer section .twitter {
-  background-position-y: -50px;
+  background-position-y: -10px;
 }
 .section-footer section .instagram {
-  background-position-y: -10px;
+  background-position-y: -50px;
 }
 .section-footer section .facebook {
   background-position-x: -14px;

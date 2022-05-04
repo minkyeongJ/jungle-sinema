@@ -36,18 +36,24 @@ body{
 }
 
 .main-nav{
-    .nav-list{
+    li{
         display: inline-block;
-        color: $gray3;
-        font-size: 16px;
-        font-weight: 500;
-        margin: 0 30px;
-    }
-    .color-black{
-        color: black;
+        .nav-list{
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 30px;
+            text-decoration: none;
+        }
     }
 }
 
+.color-gray{
+    color: $gray3;
+}
+
+.color-black{
+        color: black;
+    }
 .box-movielist{
     text-align: left ;
     background-color: white;
@@ -79,9 +85,9 @@ body{
             .title-movie{
                 overflow: hidden;
                 white-space: nowrap;
+                text-overflow: ellipsis;
                 display: block;
                 font-weight: 900;
-                text-overflow: ellipsis;
                 font-size: 16px;
                 margin: 11px 0 12px;
             }
@@ -166,6 +172,9 @@ body{
         ul{
             float: right;
         }
+        li{
+            float: left;
+        }
         .twitter, .instagram, .facebook{
             float: left;
             width: 20px;
@@ -177,10 +186,10 @@ body{
             background-position-x: -10px;
         }
         .twitter{
-            background-position-y: -50px;
+            background-position-y: -10px;
         }
         .instagram{
-            background-position-y: -10px;
+            background-position-y: -50px;
         }
         .facebook{
             background-position-x: -14px;
@@ -188,7 +197,6 @@ body{
         }
     }
     span{
-        
         display: inline-block;
     }
     .section-line{
