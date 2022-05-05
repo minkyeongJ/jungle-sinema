@@ -13,8 +13,7 @@ body{
 
 .box-sinema{
     margin: 86px auto 135px;
-    width: 1060px;
-    height: fit-content;
+    max-width: 1060px; 
     padding: 40px 28px 30px;
     text-align: center;
     background-color: $gray6;
@@ -53,12 +52,12 @@ body{
 
 .color-black{
         color: black;
-    }
+}
+
 .box-movielist{
     text-align: left ;
     background-color: white;
     border-radius: 15px;
-    width: 1003px;
     padding: 25px 26px;
     margin-top: 28px;
     outline : 1px solid $gray4;
@@ -66,7 +65,7 @@ body{
     .card-movielist{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 25px;
+        gap: 25px;
         .card-movie{
             width: 220px;
             padding: 19px 20px 0;
@@ -163,7 +162,7 @@ body{
     background-color: $gray6;  
     section{
         margin: 0 auto;
-        width: 1189px;
+        max-width: 1189px;
         h2{
             display: inline-block;
             font-size: 22px;
@@ -201,12 +200,12 @@ body{
     }
     .section-line{
         margin: 42px auto 36px;
-        width: 1189px;
+        max-width: 1189px;
         border-top: 1px solid $input-box;
     }
     .details-footer{
         margin: 0 auto;
-        width: 1189px;
+        max-width: 1189px;
         color: $gray2;
         font-size: 14px; 
         .txt-companyname, [class^="title-"]{

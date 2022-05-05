@@ -145,10 +145,7 @@ body {
 
 .box-sinema {
   margin: 86px auto 135px;
-  width: 1060px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-width: 1060px;
   padding: 40px 28px 30px;
   text-align: center;
   background-color: #F2F2F2;
@@ -191,7 +188,6 @@ body {
   text-align: left;
   background-color: white;
   border-radius: 15px;
-  width: 1003px;
   padding: 25px 26px;
   margin-top: 28px;
   outline: 1px solid #BDBDBD;
@@ -200,7 +196,7 @@ body {
 .box-movielist .card-movielist {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 25px;
+  gap: 25px;
 }
 .box-movielist .card-movielist .card-movie {
   width: 220px;
@@ -294,7 +290,7 @@ body {
 }
 .section-footer section {
   margin: 0 auto;
-  width: 1189px;
+  max-width: 1189px;
 }
 .section-footer section h2 {
   display: inline-block;
@@ -332,12 +328,12 @@ body {
 }
 .section-footer .section-line {
   margin: 42px auto 36px;
-  width: 1189px;
+  max-width: 1189px;
   border-top: 1px solid #C4C4C4;
 }
 .section-footer .details-footer {
   margin: 0 auto;
-  width: 1189px;
+  max-width: 1189px;
   color: #4F4F4F;
   font-size: 14px;
 }
