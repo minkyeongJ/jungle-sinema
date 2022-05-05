@@ -6,14 +6,14 @@
 
 
 
-body{
+body, html{
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
 
 .box-sinema{
     margin: 86px auto 135px;
-    max-width: 1060px; 
+    width: fit-content; 
     padding: 40px 28px 30px;
     text-align: center;
     background-color: $gray6;
@@ -70,6 +70,7 @@ body{
             width: 220px;
             padding: 19px 20px 0;
             background-color: white;
+            box-shadow: (0px 0px 5px rgba(0, 0, 0, 0.3));
             box-sizing: border-box;
             border: 1px solid $gray4;
             border-radius: 10px ;
@@ -158,9 +159,10 @@ body{
 }
 
 .section-footer{
+    margin: 0;
     padding: 53px 0 38px;
     background-color: $gray6;  
-    section{
+    .footer-top{
         margin: 0 auto;
         max-width: 1189px;
         h2{
@@ -195,37 +197,101 @@ body{
             background-position-y: -90px;
         }
     }
-    span{
-        display: inline-block;
-    }
     .section-line{
         margin: 42px auto 36px;
         max-width: 1189px;
         border-top: 1px solid $input-box;
     }
-    .details-footer{
+    .footer-bottom{
         margin: 0 auto;
         max-width: 1189px;
-        color: $gray2;
-        font-size: 14px; 
-        .txt-companyname, [class^="title-"]{
-            font-weight: 700;
-        }
-        .txt-companyname, .txt-ownername, .txt-businessnumber, .txt-industry{
-            &::after{
+        .details-footer{
+            margin: 0 auto;
+            max-width: 1189px;
+            color: $gray2;
+            font-size: 14px; 
+            li{
                 display: inline-block;
-                position: relative;
-                content:'';
-                border-left: 1px solid $gray2;
-                height: 16px;
-                top: 3px;
-                margin: 0 7px;
+                span{
+                    word-break: keep-all;
+                }
+            }
+            .txt-companyname, [class^="title-"]{
+                font-weight: 700;
+            }
+            .txt-companyname, .txt-ownername, .txt-businessnumber, .txt-industry{
+                &::after{
+                    display: inline-block;
+                    position: relative;
+                    content:'';
+                    border-left: 1px solid $gray2;
+                    height: 16px;
+                    top: 3px;
+                    margin: 0 7px;
+                }
             }
         }
         .txt-copyright{
             float: right;
             font-weight: 700 ;
+            margin-top: -17px;
         }
     }
 }
 
+
+@media screen and (max-width:1080px) {
+    .box-movielist{
+        .card-movielist{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (min-width:591px) and (max-width:840px) {
+    .box-title{
+        &::after{
+            content: " ";
+            display: block;
+            width: 500px;
+            margin: 37px auto 28px;
+            border-bottom: 2px solid $gray4;
+        }
+    }
+    .box-movielist{
+        .card-movielist{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .section-footer{
+        .footer-bottom{
+            .txt-copyright{
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:590px) {
+    body, html{
+        width: min-content;
+        height: min-content;
+    }
+
+    .box-title{
+        &::after{
+            content: " ";
+            display: block;
+            width: 500px;
+            margin: 37px auto 28px;
+            border-bottom: 2px solid $gray4;
+        }
+    }
+
+    .box-movielist{
+        .card-movielist{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
