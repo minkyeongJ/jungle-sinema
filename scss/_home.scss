@@ -4,8 +4,6 @@
     font-family: 'Nanum Gothic', sans-serif;
     font-family: 'Roboto', sans-serif; */
 
-
-
 body, html{
     background-color: white;
     font-family: 'Roboto', sans-serif;
@@ -297,6 +295,19 @@ body, html{
     .box-movielist{
         .card-movielist{
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .section-footer{
+        .footer-bottom{
+            overflow: hidden;
+            .details-footer{
+                max-width: 400px;
+                float: left;
+            }
+            .txt-copyright{
+                margin-top: 0px;
+            }
         }
     }
 }

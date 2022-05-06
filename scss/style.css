@@ -426,4 +426,15 @@ body, html {
   .box-movielist .card-movielist {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .section-footer .footer-bottom {
+    overflow: hidden;
+  }
+  .section-footer .footer-bottom .details-footer {
+    max-width: 400px;
+    float: left;
+  }
+  .section-footer .footer-bottom .txt-copyright {
+    margin-top: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
