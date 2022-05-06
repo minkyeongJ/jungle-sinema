@@ -299,7 +299,7 @@ body, html {
 
 .section-footer {
   margin: 0;
-  padding: 53px 0 38px;
+  padding: 53px 10px 38px;
   background-color: #F2F2F2;
 }
 .section-footer .footer-top {
@@ -394,6 +394,13 @@ body, html {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .section-footer .footer-bottom {
+    overflow: hidden;
+  }
+  .section-footer .footer-bottom .details-footer {
+    max-width: 400px;
+    float: left;
+  }
   .section-footer .footer-bottom .txt-copyright {
     margin-top: 0px;
   }

@@ -160,8 +160,8 @@ body, html{
 
 .section-footer{
     margin: 0;
-    padding: 53px 0 38px;
-    background-color: $gray6;  
+    padding: 53px 10px 38px;
+    background-color: $gray6;
     .footer-top{
         margin: 0 auto;
         max-width: 1189px;
@@ -266,6 +266,11 @@ body, html{
 
     .section-footer{
         .footer-bottom{
+            overflow: hidden;
+            .details-footer{
+                max-width: 400px;
+                float: left;
+            }
             .txt-copyright{
                 margin-top: 0px;
             }
